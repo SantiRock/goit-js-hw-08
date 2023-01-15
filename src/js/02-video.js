@@ -12,7 +12,7 @@ function uno () {
 var throt_fun = throttle(function (data) {
     localStorage.setItem("videoplayer-current-time", JSON.stringify(data));
      let time = localStorage.getItem("videoplayer-current-time");
-    console.log(time);
+    console.log("videoplayer-current-time: " + time);
 }, 1000);
 1  
 player.on("timeupdate", function(data) {
