@@ -28,5 +28,4 @@ let lightbox = new SimpleLightbox('.gallery a', { gallery });
 lightbox.options.captionsData = "alt";
 lightbox.options.captionDelay = 250;
 
-console.log(lightbox);
 console.log(gallery);
