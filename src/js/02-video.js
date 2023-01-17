@@ -5,9 +5,9 @@ const iframe = document.querySelector('iframe');
 
 const player = new Vimeo(iframe);
 
-function uno () {
-    console.log("probando");
-};
+let vct =  "videoplayer-current-time: " + localStorage.getItem("videoplayer-current-time");
+console.log(vct);
+
 
 var throt_fun = throttle(function (data) {
     localStorage.setItem("videoplayer-current-time", JSON.stringify(data));
