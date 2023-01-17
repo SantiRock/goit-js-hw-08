@@ -3,15 +3,16 @@ import throttle from "lodash.throttle";
 const form = document.querySelector(".feedback-form");
 
 let saveInput = localStorage.getItem("feedback-form-state");
-console.log(saveInput);
+console.log("Initial Local Storage: "+ saveInput);
 
 if (saveInput !== null ) {
     let parceInput = JSON.parse(saveInput);
     form.email.value = parceInput.email;
     form.message.value = parceInput.message;
 } else {
-    form.email.value = "";
-    form.message.value = "";
+    //form.email.value = "";
+    //form.message.value = "";
+    form.reset;
 };
 
 let throFun = throttle (function() {
